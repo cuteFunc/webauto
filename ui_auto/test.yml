@@ -1,0 +1,45 @@
+mainweb:
+    name: 初始化页面名字（登录）  # 如果不登录则不填mainweb
+    domain: https://bi.test.laiyifen.com
+    url: /tianpan/?barhidden=true#/takeoutcommunity
+    header:
+      - mipapp;iOS;13.5.1;6.1.18;2f7dc98b29ea9803b09b8f1490ae5fab;00069273;iPhone
+    step:
+      - xpath_click: //*[@id="home"]/div/div[1]/div[2]/div/div[2]
+      - xpath_click: //*[@id="app"]/div/div[1]/div[1]/header/img
+
+testpoint:
+-
+    name: 测试点1
+    pre_step:
+      - xpath_click: //*[@id="home"]/div/div[1]/div[2]/div/div[2]
+      - xpath_click: //*[@id="app"]/div/div[1]/div[1]/header/img
+#    down_step:
+#      - xpath_click: //*[@id="home"]/div/div[1]/div[2]/div/div[2]  # 对xpath点击
+#      - xpath:  #取出xpath内容
+#      - xpath_input: xpath, text 对xpath输入
+    ckeck_point:
+      - eq:
+          - xpath: //*[@id="home"]/div/div[2]/div[1]/div[2]/div[1]/div[1]/div
+          - sql: sql_name # sql从配置文件中读取
+      - eq:
+          - xpath: //*[@id="home"]/div/div[2]/div[1]/div[2]/div[1]/div[2]/div
+          - sql: sql_name # sql从配置文件中读取
+      - eq:
+          - xpath: //*[@id="home"]/div/div[2]/div[1]/div[2]/div[1]/div[3]/div
+          - sql: sql_name # sql从配置文件中读取
+      - eq:
+          - xpath: //*[@id="home"]/div/div[2]/div[1]/div[2]/div[2]/div[1]/div
+          - sql: sql_name # sql从配置文件中读取
+      - eq:
+          - xpath: //*[@id="home"]/div/div[2]/div[1]/div[2]/div[2]/div[2]/div
+          - sql: sql_name # sql从配置文件中读取
+      - eq:
+          - xpath: //*[@id="home"]/div/div[2]/div[1]/div[2]/div[2]/div[3]/div
+          - sql: sql_name # sql从配置文件中读取
+      - eq:
+          - xpath: //*[@id="home"]/div/div[2]/div[1]/div[2]/div[3]/div[1]/div
+          - sql: sql_name # sql从配置文件中读取
+      - eq:
+          - xpath: //*[@id="home"]/div/div[2]/div[4]/div[2]/div[2]/div/div[1]/div[1]/div[1]/div[1]/div[3]
+          - sql: sql_name
